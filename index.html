@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpeg" alt="Logo">
+        </div>
+        <div class="user-info">
+            <span>Josue Ambrosio</span>
+            <span class="status">Conectado</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="header">
+            <h1>¡Ya estás a un paso de tu curso!</h1>
+            <img src="imagen-curso.png" alt="Curso Node.js">
+            <p>Curso de Node.js, un entorno de ejecución para JavaScript que permite ejecutar código del lado del servidor.</p>
+            <h2>S/120</h2>
+        </div>
+
+        <form id="payment-form">
+            <label for="card">Seleccionar tarjeta</label>
+            <select id="card" name="card">
+                <option value="visa">Visa</option>
+                <option value="mastercard">MasterCard</option>
+                <option value="amex">American Express</option>
+            </select>
+
+            <label for="name">Nombre completo del titular</label>
+            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+
+            <label for="card-number">Información de la tarjeta</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 1234 1234 1234" maxlength="16" required>
+
+            <div class="expiry-cvc">
+                <div class="col">
+                    <label for="expiry">MM / YY</label>
+                    <input type="text" id="expiry" name="expiry" placeholder="MM / YY" maxlength="5" required>
+                </div>
+                <div class="col">
+                    <label for="cvc">CVC</label>
+                    <input type="text" id="cvc" name="cvc" placeholder="CVC" maxlength="3" required>
+                </div>
+            </div>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+
+            <button type="submit">Pagar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
